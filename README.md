@@ -6,16 +6,16 @@
 * **Frontend:** Astro + Tailwind CSS (Optimizado para alto rendimiento).
 * **Backend Core:** NestJS, Spring Boot, Flask & Supabase.
 * **Infraestructura:** Desplegado mediante Docker en un servidor personal (Home Lab) con administración Linux (Ubuntu Server).[cite: 1]
-* **Cloud:** Integración con servicios de Microsoft Azure.[cite: 1]
+* **Cloud:** Integración con servicios de Microsoft Azure.
 
 ## 🚀 Proyectos Destacados
-* **NuevoSpotify:** Plataforma de streaming personal autogestionada.[cite: 1]
-* **Barbería API:** Sistema de citas robusto con Spring Boot y Azure.[cite: 1]
-* **PWA Personal:** Aplicación móvil con soporte offline y acceso rápido.[cite: 1]
-* **Instruccional NestJS:** Arquitectura empresarial para gestión educativa.[cite: 1]
+* **NuevoSpotify:** Plataforma de streaming personal autogestionada.
+* **Barbería API:** Sistema de citas robusto con Spring Boot y Azure.
+* **PWA Personal:** Aplicación móvil con soporte offline y acceso rápido.
+* **Instruccional NestJS:** Arquitectura empresarial para gestión educativa.
 
 ## 📞 Contacto
-El sitio incluye un formulario funcional que conecta directamente con mi correo personal y un enlace directo a mi CV actualizado.[cite: 1]
+El sitio incluye un formulario funcional que conecta directamente con mi correo personal y un enlace directo a mi CV actualizado.
 
 ---
-*Hecho por [Ignacio Herrera (RocketDev-TV)](https://github.com/RocketDev-TV)*[cite: 1]
+*Hecho por [Ignacio Herrera (RocketDev-TV)](https://github.com/RocketDev-TV)*
