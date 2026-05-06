@@ -1,0 +1,30 @@
+<!-- Sección de Proyectos (Ejemplo de una tarjeta) -->
+<section class="p-8 bg-zinc-900 text-white">
+  <h2 class="text-3xl font-bold mb-8">Proyectos Destacados</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Card NuevoSpotify -->
+    <div class="border border-zinc-700 p-4 rounded-xl hover:bg-zinc-800 transition">
+      <img src="/img/nuevo-spotify.png" alt="NuevoSpotify" class="rounded-lg mb-4">
+      <h3 class="text-xl font-semibold">NuevoSpotify</h3>
+      <p class="text-zinc-400 text-sm my-2">Servicio de streaming personal con Flask y Supabase, hosteado en Home Lab.</p>
+      <div class="flex gap-2 mb-4">
+        <span class="text-xs bg-blue-900 px-2 py-1 rounded">Python</span>
+        <span class="text-xs bg-green-900 px-2 py-1 rounded">Linux</span>
+      </div>
+      <a href="https://github.com/RocketDev-TV" class="text-orange-400 hover:underline">Ver Repo →</a>
+    </div>
+
+    <!-- Aquí irían los otros 3 -->
+  </div>
+</section>
+
+<!-- Formulario de Contacto -->
+<section class="p-8 bg-zinc-950">
+  <form action="https://formspree.io/f/TU_ID_AQUÍ" method="POST" class="max-w-md mx-auto space-y-4">
+    <input type="text" name="name" placeholder="Tu Nombre" class="w-full p-2 bg-zinc-800 border border-zinc-700 rounded text-white" required>
+    <input type="email" name="email" placeholder="Tu Correo" class="w-full p-2 bg-zinc-800 border border-zinc-700 rounded text-white" required>
+    <textarea name="message" placeholder="¿En qué puedo ayudarte?" class="w-full p-2 bg-zinc-800 border border-zinc-700 rounded text-white h-32"></textarea>
+    <button type="submit" class="w-full bg-orange-600 hover:bg-orange-500 p-2 rounded font-bold transition">Enviar Mensaje</button>
+  </form>
+</section>

@@ -1,0 +1,297 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import ServerStatus from '../components/ServerStatus.astro';
+
+const projects = [
+	{
+		id: 'spotify',
+		title: "NuevoSpotify",
+		icon: "music",
+		description: "Plataforma de streaming personal con arquitectura de microservicios autogestionada.",
+		longDesc: "Desarrollé una API REST robusta con Flask y Supabase para el almacenamiento de metadatos. El sistema está optimizado para streaming de audio de alta fidelidad desde mi propio servidor doméstico.",
+		tags: ['Python', 'Flask', 'Supabase', 'Linux'],
+		repo: "https://github.com/RocketDev-TV/NuevoSpotify",
+		images: ['/img/Streaming.png']
+	},
+	{
+		id: 'barber',
+		title: "Barbería API",
+		icon: "scissors",
+		description: "Sistema empresarial de gestión de citas y administración de sucursales con arquitectura escalable.",
+		longDesc: "Implementado con Spring Boot y Azure, este sistema permite el control total de agendas, ingresos estimados y perfiles de barberos en tiempo real.",
+		tags: ['Java', 'Spring Boot', 'Azure', 'SQL'],
+		repo: "https://github.com/RocketDev-TV/sistema-citas-web",
+		images: ['/img/SistemaBarberia.png']
+	},
+	{
+		id: 'instruccional',
+		title: "Diseño Instruccional",
+		icon: "code",
+		description: "Core Backend desarrollado con NestJS y GraphQL para la gestión de contenidos educativos.",
+		longDesc: "En este proyecto me enfoqué exclusivamente en el Backend. Utilicé NestJS con GraphQL para crear consultas eficientes de rúbricas por periodo e integración con Prisma.",
+		tags: ['NestJS', 'GraphQL', 'Prisma', 'TypeScript'],
+		repo: "https://github.com/uriel-77/Project-Site-Backend",
+		images: ['/img/DI.jpeg']
+	},
+	{
+		id: 'pwa',
+		title: "Gestión PWA",
+		icon: "smartphone",
+		description: "Progressive Web App móvil-first para control financiero con soporte offline.",
+		longDesc: "Diseñada para optimizar procesos de cobranza. Incluye visualización de flujo de caja, balance de ventas y gestión de clientes con interfaz móvil nativa.",
+		tags: ['PWA', 'JavaScript', 'Tailwind', 'Vercel'],
+		repo: "https://github.com/RocketDev-TV/joyeria-app",
+		images: ['/img/joy1.jpeg', '/img/joy2.jpeg', '/img/joy3.jpeg']
+	}
+];
+---
+
+<Layout title="Ignacio Herrera | Backend & Cloud Engineer">
+	<main class="max-w-5xl mx-auto px-4 md:px-6 py-20 flex flex-col gap-24 md:gap-32 w-full overflow-x-hidden">
+		
+		<!-- Hero Section -->
+		<section class="flex flex-col md:flex-row items-center gap-12 pt-10">
+			<div class="flex-1 order-2 md:order-1 text-center md:text-left">
+				<div class="flex flex-col gap-4 items-center md:items-start">
+					<ServerStatus />
+					<div class="text-zinc-500 font-mono text-[10px] uppercase tracking-[0.2em] flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
+						<span>📍 CDMX, México</span>
+						<span>⏰ UTC-06 (CST)</span>
+						<span class="text-orange-500/80 font-bold">📞 +52 55 5401 4038</span>
+					</div>
+				</div>
+
+				<h1 class="text-6xl md:text-8xl font-black text-white mt-8 mb-6 tracking-tighter leading-[0.9]">
+					IGNACIO <span class="text-orange-500">HERRERA</span>
+				</h1>
+				
+				<p class="text-lg text-zinc-400 max-w-xl leading-relaxed font-medium mx-auto md:mx-0">
+					Ingeniero en la <span class="text-zinc-200">UPIICSA - IPN</span>. Especialista en Backend, Cloud y Ciencia de Datos. Arquitecto de sistemas escalables y entornos Self-hosting.
+				</p>
+
+				<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-10">
+					<a href="/CV_Ignacio_HG.pdf" download class="group bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-orange-500 hover:text-white transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-white/5">
+						Descargar CV
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+					</a>
+					<div class="flex gap-3">
+						<a href="https://github.com/RocketDev-TV" target="_blank" class="p-4 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-orange-500/50 hover:bg-zinc-800 transition-all text-zinc-400 hover:text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+						</a>
+						<a href="https://www.linkedin.com/in/ivanhg-dev/" target="_blank" class="p-4 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-orange-500/50 hover:bg-zinc-800 transition-all text-zinc-400 hover:text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+						</a>
+						<a href="https://www.instagram.com/rocketdev.tv/" target="_blank" class="p-4 bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-orange-500/50 hover:bg-zinc-800 transition-all text-zinc-400 hover:text-white">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="w-64 h-64 md:w-80 md:h-80 shrink-0 order-1 md:order-2 group mx-auto md:mx-0">
+				<div class="w-full h-full rounded-[40px] border-4 border-zinc-900 overflow-hidden shadow-2xl rotate-3 group-hover:rotate-0 transition-all duration-700 relative">
+					<img src="/img/FotoPerfil.jpeg" alt="Ignacio Herrera" class="w-full h-full object-cover" />
+				</div>
+			</div>
+		</section>
+
+		<!-- Tecnologías & Aptitudes -->
+		<section>
+			<h2 class="text-2xl font-bold mb-10 flex items-center gap-4 text-white">
+				<span class="w-12 h-[2px] bg-orange-500"></span> Tecnologías & Aptitudes
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-sm w-full">
+				<div class="space-y-6">
+					<h3 class="font-bold uppercase tracking-widest text-xs text-orange-500">Backend & Cloud</h3>
+					<div class="flex flex-wrap gap-2">
+						{['Java', 'Spring Boot', 'TypeScript', 'NestJS', 'GraphQL', 'Prisma', 'Python', 'Flask', 'Azure'].map(tech => (
+							<span class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-300 font-bold tracking-tight">{tech}</span>
+						))}
+					</div>
+				</div>
+				<div class="space-y-6">
+					<h3 class="font-bold uppercase tracking-widest text-xs text-orange-500">Infra & DevOps</h3>
+					<div class="flex flex-wrap gap-2">
+						{['Docker', 'Ubuntu', 'Cloudflare', 'Tailscale', 'Firebase', 'Supabase', 'PostgreSQL'].map(tech => (
+							<span class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-300 font-bold tracking-tight">{tech}</span>
+						))}
+					</div>
+				</div>
+				<div class="space-y-6">
+					<h3 class="font-bold uppercase tracking-widest text-xs text-orange-500">Testing & Data</h3>
+					<div class="flex flex-wrap gap-2">
+						{['Testing QC', 'Pandas', 'NumPy', 'SQL', 'Git', 'Linux'].map(tech => (
+							<span class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-zinc-300 font-bold tracking-tight">{tech}</span>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Proyectos Destacados (Iconos) -->
+		<section>
+			<h2 class="text-2xl font-bold mb-10 text-white flex items-center gap-4">
+				<span class="w-12 h-[2px] bg-orange-500"></span> Proyectos Destacados
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+				{projects.map(project => (
+					<div class="group bg-zinc-900/50 border border-zinc-800 rounded-[32px] p-6 md:p-8 hover:border-orange-500/30 transition-all flex flex-col justify-between h-full overflow-hidden">
+						<div>
+							<div class="text-orange-500 mb-6 group-hover:scale-110 transition-transform w-fit">
+								{project.icon === 'music' && <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>}
+								{project.icon === 'scissors' && <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>}
+								{project.icon === 'code' && <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>}
+								{project.icon === 'smartphone' && <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>}
+							</div>
+							<h3 class="text-2xl font-black text-white mb-3 tracking-tight">{project.title}</h3>
+							<p class="text-zinc-400 text-sm leading-relaxed mb-8">{project.description}</p>
+						</div>
+						<button 
+							onclick={`document.getElementById('modal-${project.id}').showModal()`}
+							class="text-xs font-bold uppercase tracking-widest text-orange-500 hover:text-orange-400 transition-colors flex items-center gap-2 w-fit"
+						>
+							Saber más <span>→</span>
+						</button>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<!-- Experiencia Profesional -->
+		<section>
+			<h2 class="text-2xl font-bold mb-10 text-white flex items-center gap-4">
+				<span class="w-12 h-[2px] bg-orange-500"></span> Experiencia Profesional
+			</h2>
+			<div class="relative pl-8 md:pl-10 border-l-2 border-zinc-900 w-full">
+				<div class="relative w-full">
+					<div class="absolute -left-[41px] md:-left-[49px] top-0 w-4 h-4 bg-orange-500 rounded-full border-4 border-zinc-950 shadow-[0_0_15px_rgba(249,115,22,0.4)]"></div>
+					<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+						<h3 class="text-2xl font-black text-white leading-none">Tester QC</h3>
+						<span class="text-xs font-mono bg-zinc-900 text-zinc-500 px-3 py-1 rounded-full border border-zinc-800 uppercase tracking-tighter w-fit">Feb 2025 - Sep 2025</span>
+					</div>
+					<p class="text-orange-500 font-bold mt-2 text-lg">CTIN (Centro de Tecnología e Innovación)</p>
+					<ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 text-zinc-400 text-sm w-full">
+						<li class="bg-zinc-900/40 p-4 rounded-2xl border border-zinc-800/50 break-words">• Aseguramiento de calidad enfocado en apps móviles y rendimiento.</li>
+						<li class="bg-zinc-900/40 p-4 rounded-2xl border border-zinc-800/50 break-words">• Gestión de tareas semanales y reportes vía GlobalHITSS.</li>
+						<li class="bg-zinc-900/40 p-4 rounded-2xl border border-zinc-800/50 break-words">• Ejecución de pruebas de calidad para plataformas de streaming.</li>
+						<li class="bg-zinc-900/40 p-4 rounded-2xl border border-zinc-800/50 break-words">• Documentación y colaboración directa para resolución de bugs.</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Educación & Eventos (FIX DESBORDE) -->
+		<section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 w-full">
+			<div class="flex flex-col gap-6 min-w-0">
+				<h2 class="text-2xl font-bold text-white flex items-center gap-3">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-orange-500 shrink-0"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+					Educación
+				</h2>
+				<div class="p-6 md:p-8 bg-zinc-900/50 border border-zinc-800 rounded-3xl flex-1 flex flex-col justify-center overflow-hidden break-words w-full">
+					<h3 class="text-xl font-bold text-white leading-tight">Ingeniería en Informática</h3>
+					<p class="text-orange-500 font-bold text-[10px] md:text-xs mt-1 uppercase">UPIICSA - IPN | Agosto 2022 - En curso</p>
+					<ul class="mt-4 text-zinc-400 text-sm space-y-2">
+						<li>• Formación integral en computación distribuida y algoritmos complejos.</li>
+						<li>• Especialización en ingeniería de software y metodologías ágiles.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-6 min-w-0">
+				<h2 class="text-2xl font-bold text-white flex items-center gap-3">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-orange-500 shrink-0"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+					Eventos
+				</h2>
+				<div class="p-6 md:p-8 bg-zinc-900/50 border border-orange-500/10 rounded-3xl flex-1 flex flex-col justify-center overflow-hidden break-words w-full">
+					<h3 class="text-xl font-bold text-white leading-tight">Hackathon de Logística IPN</h3>
+					<p class="text-orange-500 font-bold text-[10px] md:text-xs mt-1 uppercase">Noviembre 2025</p>
+					<p class="mt-4 text-zinc-400 text-sm leading-relaxed">Desarrollo de soluciones tecnológicas bajo presión para problemas reales de cadena de suministro.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Modales NATIVOS Y CENTRADOS -->
+		{projects.map(project => (
+			<dialog id={`modal-${project.id}`} class="m-auto w-[95vw] md:w-[90vw] max-w-3xl max-h-[90vh] bg-zinc-900 border border-zinc-800 rounded-[32px] p-0 text-white shadow-2xl backdrop:bg-zinc-950/90 backdrop:backdrop-blur-md overflow-hidden">
+				<div class="flex flex-col h-full max-h-[90vh] w-full">
+					
+					<!-- Header (Carrusel) con Altura Fija -->
+					<div class="relative w-full shrink-0 bg-black h-[280px] md:h-[400px] group/modal">
+						<!-- Botones de Navegación -->
+						{project.images.length > 1 && (
+							<div class="hidden md:block">
+								<button class="absolute left-4 top-1/2 -translate-y-1/2 z-50 p-2 bg-black/50 hover:bg-orange-500 rounded-full transition-all border border-white/10 opacity-0 group-hover/modal:opacity-100" onclick="this.parentElement.parentElement.querySelector('.carousel-scroll').scrollBy({left: -400, behavior: 'smooth'})">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="15 18 9 12 15 6"/></svg>
+								</button>
+								<button class="absolute right-4 top-1/2 -translate-y-1/2 z-50 p-2 bg-black/50 hover:bg-orange-500 rounded-full transition-all border border-white/10 opacity-0 group-hover/modal:opacity-100" onclick="this.parentElement.parentElement.querySelector('.carousel-scroll').scrollBy({left: 400, behavior: 'smooth'})">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
+								</button>
+							</div>
+						)}
+
+						<!-- Contenedor Scroll -->
+						<div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-full hide-scrollbar">
+							{project.images.map(img => (
+								<div class="min-w-full h-full snap-center flex items-center justify-center p-4 shrink-0">
+									<img src={img} class="max-w-full max-h-full object-contain rounded-xl shadow-2xl pointer-events-none" />
+								</div>
+							))}
+						</div>
+						
+						<!-- Puntos de indicador -->
+						{project.images.length > 1 && (
+							<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 px-3 py-1.5 bg-black/40 backdrop-blur-md rounded-full border border-white/10 pointer-events-none">
+								{project.images.map(() => <div class="w-1.5 h-1.5 rounded-full bg-orange-500/50"></div>)}
+							</div>
+						)}
+
+						<!-- Botón de Cerrar -->
+						<button onclick={`this.closest('dialog').close()`} class="absolute top-4 right-4 p-2 bg-black/60 hover:bg-orange-500 rounded-full transition-all border border-white/10 z-50">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+						</button>
+					</div>
+
+					<!-- Body (Texto) con Scroll Interno -->
+					<div class="p-6 md:p-10 overflow-y-auto w-full">
+						<h2 class="text-2xl md:text-3xl font-black mb-3 tracking-tight leading-none">{project.title}</h2>
+						<p class="text-zinc-400 leading-relaxed mb-6 text-sm">{project.longDesc}</p>
+						<div class="flex flex-wrap gap-2 mb-8">
+							{project.tags.map(tag => <span class="px-3 py-1 bg-zinc-800 text-zinc-400 text-[10px] font-black uppercase rounded-lg border border-zinc-700">{tag}</span>)}
+						</div>
+						<a href={project.repo} target="_blank" class="w-full bg-orange-600 hover:bg-orange-500 py-4 rounded-2xl font-bold flex justify-center gap-3 transition-colors active:scale-95 shadow-lg shadow-orange-900/20">
+							Ver Repositorio en GitHub
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+						</a>
+					</div>
+
+				</div>
+			</dialog>
+		))}
+
+		<!-- Contact Section -->
+		<section id="contact" class="bg-zinc-950 border border-zinc-800 p-8 md:p-20 rounded-[40px] md:rounded-[60px] mb-20 w-full overflow-hidden">
+			<div class="text-center mb-12 md:mb-16">
+				<h2 class="text-4xl md:text-5xl font-black text-white mb-4 italic tracking-tighter">¿Hablamos?</h2>
+				<p class="text-zinc-500 font-medium text-sm md:text-base">Envíame un mensaje directo a mi correo personal.</p>
+			</div>
+			<ContactForm />
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+	.hide-scrollbar::-webkit-scrollbar { display: none; }
+	.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+	
+	/* Animación súper suave y nativa */
+	dialog[open] {
+		animation: modalShow 0.25s ease-out forwards;
+	}
+
+	@keyframes modalShow {
+		from { opacity: 0; transform: scale(0.98); }
+		to { opacity: 1; transform: scale(1); }
+	}
+</style>
