@@ -6,13 +6,13 @@ import ServerStatus from '../components/ServerStatus.astro';
 const projects = [
 	{
 		id: 'spotify',
-		title: "NuevoSpotify",
+		title: "Straming App",
 		icon: "music",
 		description: "Plataforma de streaming personal con arquitectura de microservicios autogestionada.",
 		longDesc: "Desarrollé una API REST robusta con Flask y Supabase para el almacenamiento de metadatos. El sistema está optimizado para streaming de audio de alta fidelidad desde mi propio servidor doméstico.",
 		tags: ['Python', 'Flask', 'Supabase', 'Linux'],
 		repo: "https://github.com/RocketDev-TV/NuevoSpotify",
-		images: ['/img/Streaming.png']
+		images: ['/img/NS/Streaming.png']
 	},
 	{
 		id: 'barber',
@@ -22,7 +22,7 @@ const projects = [
 		longDesc: "Implementado con Spring Boot y Azure, este sistema permite el control total de agendas, ingresos estimados y perfiles de barberos en tiempo real.",
 		tags: ['Java', 'Spring Boot', 'Azure', 'SQL'],
 		repo: "https://github.com/RocketDev-TV/sistema-citas-web",
-		images: ['/img/SistemaBarberia.png']
+		images: ['/img/SBarberia/SistemaBarberia.png']
 	},
 	{
 		id: 'instruccional',
@@ -32,7 +32,7 @@ const projects = [
 		longDesc: "En este proyecto me enfoqué exclusivamente en el Backend. Utilicé NestJS con GraphQL para crear consultas eficientes de rúbricas por periodo e integración con Prisma.",
 		tags: ['NestJS', 'GraphQL', 'Prisma', 'TypeScript'],
 		repo: "https://github.com/uriel-77/Project-Site-Backend",
-		images: ['/img/DI.jpeg']
+		images: ['/img/DI/DI.jpeg']
 	},
 	{
 		id: 'pwa',
@@ -42,7 +42,7 @@ const projects = [
 		longDesc: "Diseñada para optimizar procesos de cobranza. Incluye visualización de flujo de caja, balance de ventas y gestión de clientes con interfaz móvil nativa.",
 		tags: ['PWA', 'JavaScript', 'Tailwind', 'Vercel'],
 		repo: "https://github.com/RocketDev-TV/joyeria-app",
-		images: ['/img/joy1.jpeg', '/img/joy2.jpeg', '/img/joy3.jpeg']
+		images: ['/img/PWA/joy1.jpeg', '/img/PWA/joy2.jpeg', '/img/PWA/joy3.jpeg']
 	}
 ];
 ---
@@ -58,7 +58,7 @@ const projects = [
 					<div class="text-zinc-500 font-mono text-[10px] uppercase tracking-[0.2em] flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
 						<span>📍 CDMX, México</span>
 						<span>⏰ UTC-06 (CST)</span>
-						<span class="text-orange-500/80 font-bold">📞 +52 55 5401 4038</span>
+						<span class="text-orange-500/80 font-bold">📞 +52 55 4014 0384</span>
 					</div>
 				</div>
 
@@ -71,7 +71,7 @@ const projects = [
 				</p>
 
 				<div class="flex flex-wrap justify-center md:justify-start gap-4 mt-10">
-					<a href="/CV_Ignacio_HG.pdf" download class="group bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-orange-500 hover:text-white transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-white/5">
+					<a href="/others/CV-Ignacio.pdf" download class="group bg-white text-black px-8 py-4 rounded-2xl font-bold hover:bg-orange-500 hover:text-white transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-white/5">
 						Descargar CV
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
 					</a>
